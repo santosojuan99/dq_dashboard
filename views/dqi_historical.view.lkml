@@ -46,7 +46,7 @@ view: dqi_historical {
     sql: concat(${bu_name},"-",${dataset_name},"-",${table_name}) ;;
   }
 
-  measure: AverageDQI {
+  measure: average {
     type: average
     drill_fields: [dqi_pct]
   }
