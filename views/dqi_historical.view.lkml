@@ -41,6 +41,11 @@ view: dqi_historical {
     sql: ${TABLE}.table_name ;;
   }
 
+  dimension: Key {
+    type: string
+    sql: concat(${bu_name},"-",${dataset_name},"-",${table_name}) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [bu_name, dataset_name, table_name]

@@ -51,6 +51,11 @@ view: dq_historical_avg {
     sql: ${TABLE}.weightage_pct ;;
   }
 
+  dimension: Key {
+    type: string
+    sql: concat(${bu_name},"-",${dataset_name},"-",${table_name}) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [bu_name, dataset_name, table_name]
