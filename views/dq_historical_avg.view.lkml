@@ -61,8 +61,8 @@ view: dq_historical_avg {
     drill_fields: [bu_name, dataset_name, table_name]
   }
 
-  measure: average{
+  measure: AverageDQScore{
     type: average
-    drill_fields: [avg_dq_score_pct]
+    sql: ${avg_dq_score_pct} ;;
   }
 }
